@@ -39,6 +39,6 @@ export default function CourseRoutes(app) {
             res.status(404).send("Course not found");
             return;
         }
-        res.status(200).send(course);
+        res.send(course);
     });
 }
