@@ -48,6 +48,7 @@ import {
   
     app.get("/api/courses/:id", async (req, res) => {
       const { id } = req.params;
+      console.log(id);
       try {
         const course = await findCourseById(id);
         if (!course) {
