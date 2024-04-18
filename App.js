@@ -68,9 +68,12 @@ import session from "express-session";
 import "dotenv/config";
 
 const app = express();
-app.use(cors({
-  origin: process.env.FRONTEND_URL
-}));
+const corsOptions = {
+  origin: process.env.FRONTEND_URL, // or use true to reflect the request origin, as long as it's not wildcard *
+  credentials: true // This is important for credentials
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
