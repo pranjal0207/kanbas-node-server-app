@@ -7,6 +7,7 @@ const courseSchema = new mongoose.Schema({
   startDate: Date,
   endDate: Date,
   image: String,
-});
+},
+{ collection: "courses" });
 
 export default courseSchema;
